@@ -1,10 +1,18 @@
 package bytebank;
 
 public class Conta {
-	private double  saldo;
-	private int     agencia;
-	private int	    numero;
-	private Cliente titular;
+	private 	   double  saldo;
+	private        int     agencia;
+	private        int	   numero;
+	private 	   Cliente titular;
+	private static int 	   total = 0;
+	
+	public Conta(int agencia, int numero) {
+		setAgencia(agencia);
+		setNumero(numero);
+		System.out.println("Criando uma conta");
+		Conta.total++;
+	}
 	
 	public void setAgencia(int agencia) {
 		this.agencia = agencia;
@@ -44,5 +52,8 @@ public class Conta {
 			return true;
 		}
 		return false;
+	}
+	public static int getTotal() {
+		return Conta.total;
 	}
 }

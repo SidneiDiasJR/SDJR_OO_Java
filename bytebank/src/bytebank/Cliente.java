@@ -5,6 +5,12 @@ public class Cliente {
 	private String cpf;
 	private String profissao;
 	
+	public Cliente(String nome, String cpf, String profissao) {
+		setNome(nome);
+		setCpf(cpf);
+		setProfissao(profissao);
+	}
+	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
