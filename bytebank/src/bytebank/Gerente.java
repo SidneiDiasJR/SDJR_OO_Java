@@ -5,7 +5,8 @@ public class Gerente extends Funcionario {
 	private int senha;
 	
 	//Construtores
-	public Gerente(int senha) {
+	public Gerente(String nome, String cpf, double salario, int senha) {
+		super(nome, cpf, salario);
 		setSenha(senha);
 	}
 	

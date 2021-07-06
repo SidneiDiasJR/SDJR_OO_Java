@@ -7,9 +7,6 @@ public class Funcionario {
 	private double salario;
 	
 	//Construtores
-	public Funcionario() {
-		this("Nome", "CPF", 1100);
-	}
 	public Funcionario(String nome, String cpf, double salario) {
 		setNome(nome);
 		setCpf(cpf);
