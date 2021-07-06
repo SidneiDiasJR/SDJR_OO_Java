@@ -1,19 +1,23 @@
 package bytebank;
 
 public class Conta {
+	//Atributos
 	private 	   double  saldo;
 	private        int     agencia;
 	private        int	   numero;
 	private 	   Cliente titular;
 	private static int 	   total = 0;
 	
-	public Conta(int agencia, int numero) {
+	//Construtor
+	public Conta(Cliente titular, int agencia, int numero) {
 		setAgencia(agencia);
 		setNumero(numero);
+		setTitular(titular);
 		System.out.println("Criando uma conta");
 		Conta.total++;
 	}
 	
+	//Setters
 	public void setAgencia(int agencia) {
 		this.agencia = agencia;
 	}	
@@ -23,18 +27,8 @@ public class Conta {
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
 	}
-	public double getSaldo() {
-		return this.saldo;
-	}
-	public int getAgencia() {
-		return this.agencia;
-	}
-	public int getNumero() {
-		return this.numero;
-	}
-	public Cliente getTitular() {
-		return this.titular;
-	}
+	
+	//Depositar, Sacar e Transferir
 	public void depositar (double valor) {
 		this.saldo += valor;
 	}
@@ -53,7 +47,30 @@ public class Conta {
 		}
 		return false;
 	}
+	
+	//Getters
+	public double getSaldo() {
+		return this.saldo;
+	}
+	public int getAgencia() {
+		return this.agencia;
+	}
+	public int getNumero() {
+		return this.numero;
+	}
+	public Cliente getTitular() {
+		return this.titular;
+	}
 	public static int getTotal() {
 		return Conta.total;
+	}
+	
+	// toString
+	@Override
+	public String toString() {
+		return getTitular()  +
+			   "\nAgência: " + getAgencia() +
+			   "\nNúmero: "  + getTitular() +
+			   "\nSaldo: R$ " + getSaldo(); 
 	}
 }

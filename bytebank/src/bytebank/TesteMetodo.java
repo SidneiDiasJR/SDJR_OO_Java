@@ -2,8 +2,10 @@ package bytebank;
 
 public class TesteMetodo { 
 	public static void main (String[] args) {
-		Conta contaDaSarah = new Conta(1234, 5678);
-		Conta contaDoRaziel = new Conta(8765, 4321);
+		Cliente raziel = new Cliente("Raziel Leone", "111.111.111-11", "Arquiteto");
+		Cliente sarah  = new Cliente("Sarah Zelo", "222.222.222-22", "Designer");
+		Conta contaDaSarah = new Conta(sarah, 1234, 5678);
+		Conta contaDoRaziel = new Conta(raziel, 8765, 4321);
 		
 		contaDaSarah.depositar(1000);
 		contaDoRaziel.depositar(300);
@@ -17,6 +19,6 @@ public class TesteMetodo {
 		contaDoRaziel.transferir(250, contaDaSarah);
 		System.out.println("\nSaldo da Sarah: "  + contaDaSarah.getSaldo() +
 		   		   		   "\nSaldo do Raziel: " + contaDoRaziel.getSaldo() );		
-		System.out.println(Conta.getTotal());
+		System.out.println("Contas criadas: " + Conta.getTotal());
 	}
 }
