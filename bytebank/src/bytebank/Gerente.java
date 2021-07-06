@@ -14,6 +14,11 @@ public class Gerente extends Funcionario {
 		this.senha = senha;
 	}
 	
+	//Getters
+	public double getBonificacao() {
+		return super.getBonificacao() + super.getSalario();
+	}
+	
 	//Autenticação da Senha
 	public boolean autentica(int senha) {
 		if (this.senha == senha) {
@@ -24,8 +29,6 @@ public class Gerente extends Funcionario {
 	
 	//toString
 	public String toString() {
-		return "\nNome: "    + getNome() +
-			   "\nCPF: "     + getCpf() +
-			   "\nSalário: " + getSalario();
+		return super.toString();
 	}
 }
