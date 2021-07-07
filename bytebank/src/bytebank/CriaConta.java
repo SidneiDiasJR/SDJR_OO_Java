@@ -3,7 +3,7 @@ package bytebank;
 public class CriaConta {
 	public static void main(String[] args) {
 		//Instâncias e Variáveis
-		Cliente raziel 			    = new Cliente("Raziel Leone", "111.111.111-11");
+		Cliente raziel 			    = new Cliente("Raziel Leone", "111.111.111-11", 2222);
 		ContaCorrente primeiraConta = new ContaCorrente(raziel, 1234, 5678);
 		
 		//Teste métodos

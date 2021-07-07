@@ -2,19 +2,19 @@ package bytebank;
 
 public class OperadorLimpeza extends Funcionario{
 	
-	//Construtores
+	//Construtor
 	public OperadorLimpeza(String nome, String cpf, double salario) {
 		super(nome, cpf, salario);
 	}
 	
-	//getBonificacao
+	//Bonificação do Operador de Limpeza
 	
 	public double getBonificacao() {
 		return 200;
 	}
 	
-	/*toString
+	//toString
 	public String toString() {
 		return super.toString();
-	}*/
+	}
 }

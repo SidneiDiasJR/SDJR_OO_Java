@@ -1,19 +1,21 @@
 package bytebank;
 
-public class Cliente {
+public class Cliente implements Autenticavel {
 	//Atributos
 	private String nome;
 	private String cpf;
 	private String profissao;
+	private int    senha;
 	
 	//Construtores
-	public Cliente(String nome, String cpf, String profissao) {
+	public Cliente(String nome, String cpf, int senha ,String profissao) {
 		setNome(nome);
 		setCpf(cpf);
+		setSenha(senha);
 		setProfissao(profissao);
 	}
-	public Cliente(String nome, String cpf) {
-		this(nome, cpf, "Desempregado");
+	public Cliente(String nome, String cpf, int senha) {
+		this(nome, cpf, senha, "Desempregado");
 	}
 	
 	//Setters
@@ -38,11 +40,24 @@ public class Cliente {
 		return this.profissao;
 	}
 	
+	//Métodos implementados
+	@Override
+	public void setSenha(int senha) {
+		this.senha = senha;
+	}
+	@Override
+	public boolean autentica(int senha) {
+		if (this.senha == senha) {
+			return true;
+		}
+		return false;
+	}
+	
 	//toString
 	@Override
 	public String toString() {
-		return "\nNome: " 	 + getNome() +
-			   "\nCPF: "  	 + getCpf() +
+		return "\nNome: " 	   + getNome() +
+			   "\nCPF: "  	   + getCpf() +
 			   "\nProfissão: " + getProfissao();
 	}
 }

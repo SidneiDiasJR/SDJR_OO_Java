@@ -1,18 +1,19 @@
 package bytebank;
 
-public class Gerente extends Funcionario implements Autenticavel {
+public class Administrador extends Funcionario implements Autenticavel {
 	//Atributos
 	private int senha;
 	
 	//Construtor
-	public Gerente(String nome, String cpf, double salario, int senha) {
+	public Administrador(String nome, String cpf, double salario, int senha) {
 		super(nome, cpf, salario);
 		setSenha(senha);
 	}
 	
-	//Bonificação do Gerente
+	//Bonificação do Administrador
+	@Override
 	public double getBonificacao() {
-		return super.getSalario();
+		return 20000;
 	}
 	
 	//Métodos implementados
@@ -32,4 +33,5 @@ public class Gerente extends Funcionario implements Autenticavel {
 	public String toString() {
 		return super.toString();
 	}
+
 }

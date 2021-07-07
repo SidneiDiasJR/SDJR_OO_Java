@@ -2,19 +2,19 @@ package bytebank;
 
 public class Seguranca extends Funcionario {
 	
-	//Construtores
+	//Construtor
 	public Seguranca(String nome, String cpf, double salario) {
 		super(nome, cpf, salario);
 	}
 	
-	//getBonificacao
+	//Bonificação do Segurança
 	
 	public double getBonificacao() {
 		return 150;
 	}
 	
-	/*toString
+	//toString
 	public String toString() {
 		return super.toString();
-	}*/
+	}
 }

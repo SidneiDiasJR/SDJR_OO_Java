@@ -4,8 +4,8 @@ public class TesteMetodo {
 	public static void main (String[] args) {
 		//Instancias e Veriáveis
 		
-		Cliente raziel = new Cliente("Raziel Leone", "111.111.111-11", "Arquiteto");
-		Cliente sarah  = new Cliente("Sarah Zelo", "222.222.222-22", "Designer");
+		Cliente raziel = new Cliente("Raziel Leone", "111.111.111-11", 2222 , "Arquiteto");
+		Cliente sarah  = new Cliente("Sarah Zelo", "222.222.222-22", 2222 ,"Designer");
 		Conta contaDaSarah = new ContaCorrente(sarah, 1234, 5678);
 		Conta contaDoRaziel = new ContaPoupanca(raziel, 8765, 4321);
 		
