@@ -3,10 +3,10 @@ package bytebank;
 public class TesteFuncionario {
 	public static void main(String[] args) {
 		//Instâncias e Variáveis
-		Funcionario 		timDrake            = new Funcionario("Tim Drake", "444.444.444-4", 2200);
+		Seguranca 		    timDrake            = new Seguranca("Tim Drake", "444.444.444-4", 3800);
 		Gerente     		bruceWayne          = new Gerente("Bruce Wayne", "000.000.000-0", 50000, 123456789);
-		Funcionario 	    barbaraGordon       = new Seguranca("Barbara Gordon", "555.555.555-4", 4000);
-		Funcionario 	    alfredPennyworth    = new OperadorLimpeza("Alfred Pennyworth", "111.111.111-1", 10000);
+		Seguranca 	        barbaraGordon       = new Seguranca("Barbara Gordon", "555.555.555-4", 4000);
+		OperadorLimpeza	    alfredPennyworth    = new OperadorLimpeza("Alfred Pennyworth", "111.111.111-1", 10000);
 		ControleBonificacao controleBonificacao = new ControleBonificacao();
 		boolean     autentica = false;
 		

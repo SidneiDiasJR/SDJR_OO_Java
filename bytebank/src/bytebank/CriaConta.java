@@ -2,9 +2,11 @@ package bytebank;
 
 public class CriaConta {
 	public static void main(String[] args) {
+		//Instâncias e Variáveis
+		Cliente raziel 			    = new Cliente("Raziel Leone", "111.111.111-11");
+		ContaCorrente primeiraConta = new ContaCorrente(raziel, 1234, 5678);
 		
-		Cliente raziel = new Cliente("Raziel Leone", "111.111.111-11");
-		Conta primeiraConta = new Conta(raziel, 1234, 5678);
+		//Teste métodos
 		primeiraConta.depositar(300);
 		System.out.println("\nPrimeira Conta " + primeiraConta.getSaldo());
 		
