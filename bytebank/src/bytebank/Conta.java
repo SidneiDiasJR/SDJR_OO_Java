@@ -68,9 +68,9 @@ public class Conta {
 	// toString
 	@Override
 	public String toString() {
-		return getTitular()  +
+		return /*getTitular()  +
 			   "\nAgência: " + getAgencia() +
-			   "\nNúmero: "  + getTitular() +
+			   "\nNúmero: "  + getTitular() +*/
 			   "\nSaldo: R$ " + getSaldo(); 
 	}
 }
