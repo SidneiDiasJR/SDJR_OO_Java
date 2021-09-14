@@ -13,10 +13,10 @@ public class ContaCorrente extends Conta implements Tributavel{
 	}	
 	//Sobrescrição do método sacar
 	@Override
-	public boolean sacar(double valor) {
+	public void sacar(double valor) {
 		double taxa = 0.2;
 		valor += taxa;
-		return super.sacar(valor);
+		super.sacar(valor);
 	}
 	
 }
