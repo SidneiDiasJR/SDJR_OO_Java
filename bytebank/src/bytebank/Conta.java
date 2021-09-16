@@ -34,7 +34,7 @@ public abstract class Conta {
 	}
 	public void sacar (double valor) {
 		if (this.saldo < valor) {
-			throw new SaldoInsuficienteException("Saldo Disponível: " + getSaldo() + "\nValor Saque: " + valor);
+			throw new SaldoException("Saldo Disponível: " + getSaldo() + "\nValor Saque: " + valor);
 		}
 		this.saldo -= valor;
 	}	
